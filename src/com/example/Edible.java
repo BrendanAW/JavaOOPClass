@@ -1,5 +1,5 @@
-package com.company;
+package com.example;
 
 public interface Edible {
-    public void eat() throws Exception;
+    void eat() throws Exception;
 }

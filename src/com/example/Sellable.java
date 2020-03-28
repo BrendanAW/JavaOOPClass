@@ -1,5 +1,5 @@
-package com.company;
+package com.example;
 
 public interface Sellable {
-    public void sell() throws Exception;
+    void sell() throws Exception;
 }

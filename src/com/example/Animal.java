@@ -1,4 +1,4 @@
-package com.company;
+package com.example;
 
 import java.io.File;
 
@@ -37,5 +37,10 @@ public class Animal {
         } else {
             System.out.println("Bro I'm ded.");
         }
+    }
+
+    @Override
+    public String toString() {
+        return "The good boy" + name;
     }
 }

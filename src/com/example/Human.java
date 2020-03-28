@@ -1,4 +1,4 @@
-package com.company;
+package com.example;
 
 public class Human {
     String firstName;
@@ -22,5 +22,9 @@ public class Human {
         }else
             System.out.println("No change to salary.");
 
+    }
+
+    public String toString(){
+        return firstName;
     }
 }
