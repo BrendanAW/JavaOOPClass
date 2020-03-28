@@ -1,9 +1,9 @@
-package com.example;
+package com.example.Creature;
 
 public class Human extends Animal {
     String firstName;
     String lastName;
-    Animal pet;
+    Pet pet;
 
     private static String PASS = "pass";
     private Double salary;
@@ -40,4 +40,19 @@ public class Human extends Animal {
         throw new Exception("you can't sell people ya prick");
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public Pet getPet() {
+        return pet;
+    }
+
+    public void setPet(Pet pet) {
+        this.pet = pet;
+    }
 }

@@ -1,15 +1,17 @@
 package com.example;
 
+import com.example.Creature.Animal;
+import com.example.Creature.Human;
+import com.example.Creature.Pet;
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Animal rex = new Animal("dog","Rex");
+        Pet rex = new Pet("dog","Rex");
         Human bill = new Human("Bill");
         Human billette = new Human("Billette");
-        bill.firstName = "Bill";
-        bill.pet = rex;
-        billette.firstName = "Billette";
-        billette.pet = bill.pet;
+        bill.setPet(rex);
+        billette.setPet(bill.getPet());
         String realKey = "pass";
         String fakeKey = "fail";
 
@@ -20,7 +22,6 @@ public class Main {
             bill.buy(bill, billette, 10.0);
         }catch (Exception ignored){}
         bill.buy(bill, rex, 5.0);
-
 
     }
 }

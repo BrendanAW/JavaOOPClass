@@ -1,5 +1,7 @@
 package com.example;
 
+import com.example.Creature.Animal;
+
 public interface Edible {
-    void eat() throws Exception;
+    void eat(Animal animal) throws Exception;
 }

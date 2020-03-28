@@ -1,6 +1,9 @@
-package com.example;
+package com.example.Creature;
 
-public class Animal implements Sellable {
+import com.example.Edible;
+import com.example.Sellable;
+
+public class Animal implements Sellable, Edible {
     public String name;
     final String specie;
     private Double weight;
@@ -70,5 +73,12 @@ public class Animal implements Sellable {
         }
 
 
+    }
+
+    @Override
+    public void eat(Animal animal) throws Exception {
+        if (animal instanceof Pet)
+            throw new Exception("You can't eat animals");
+        else System.out.println("That " + animal.specie + " was tasty!");
     }
 }
