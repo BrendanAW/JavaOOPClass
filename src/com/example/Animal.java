@@ -1,15 +1,15 @@
 package com.example;
 
-import java.io.File;
-
-public class Animal {
+public class Animal implements Sellable {
     public String name;
     final String specie;
     private Double weight;
-    File pics;
+    double price;
+    double salary = 10;
 
-    public Animal(String specie) {
+    public Animal(String specie, String name) {
         this.specie = specie;
+        this.name = name;
         setWeight();
     }
 
@@ -39,8 +39,36 @@ public class Animal {
         }
     }
 
+    void setSalary(Double salary, String pass) {
+        if (!(this instanceof Human)) {
+            System.out.println("You can't have a salary!!!");
+            return;
+        }
+    }
+
     @Override
     public String toString() {
-        return "The good boy" + name;
+        return "The good " + this.specie + " " + this.name;
+    }
+
+    @Override
+    public void sell() throws Exception {
+
+    }
+
+    @Override
+    public void buy(Object obj, Object obj2, double price) throws Exception {
+        if (obj2 instanceof Human)
+            throw new Exception("You can't buy people");
+        assert obj instanceof Animal;
+        if (price > ((Animal) obj).salary)
+            System.out.println("You can't afford to buy: " + obj2.toString());
+        else {
+            System.out.println("You purchased: " + obj2.toString() + " for " + price + " bucks");
+            ((Animal) obj).salary -= price;
+            System.out.println("Your new salary is : " + ((Animal) obj).salary);
+        }
+
+
     }
 }
