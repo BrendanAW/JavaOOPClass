@@ -9,6 +9,7 @@ public class Animal implements Sellable, Edible {
     private Double weight;
     double price;
     double salary = 10;
+    Boolean alive = true;
 
     public Animal(String specie, String name) {
         this.specie = specie;
@@ -79,6 +80,16 @@ public class Animal implements Sellable, Edible {
     public void eat(Animal animal) throws Exception {
         if (animal instanceof Pet)
             throw new Exception("You can't eat animals");
-        else System.out.println("That " + animal.specie + " was tasty!");
+        else if (animal.alive) {
+            System.out.println("That " + animal.specie + " was tasty!");
+            animal.beEaten();
+        }else
+            System.out.println("there is no animal to be eaten, he already gone son");
+
+    }
+
+    @Override
+    public void beEaten() {
+        this.alive = false;
     }
 }

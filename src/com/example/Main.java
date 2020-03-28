@@ -22,6 +22,5 @@ public class Main {
             bill.buy(bill, billette, 10.0);
         }catch (Exception ignored){}
         bill.buy(bill, rex, 5.0);
-
     }
 }
