@@ -47,11 +47,17 @@ public class Animal implements Sellable, Edible {
         return feed(1.0);
     }
 
-    Double feed(double footAmt) {
-        if (!(this.alive && footAmt > 0))
+    Double feed(double foodAmt) {
+        if (!this.alive) {
             System.out.println("Your animal is already dead :(");
+            return 0.0;
+        }
+        if (foodAmt < 0) {
+            System.out.println("You gotta give me some food man!");
+            return this.weight;
+        }
         System.out.println("thanks for feeding me!");
-        return weight += footAmt;
+        return this.weight += foodAmt;
     }
 
     void walk() {
