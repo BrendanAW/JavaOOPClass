@@ -1,9 +1,12 @@
 package com.example.Creature;
 
+import com.example.Devices.Car;
+
 public class Human extends Animal {
     String firstName;
     String lastName;
     Pet pet;
+    Car car;
 
     private static String PASS = "pass";
     private Double salary;

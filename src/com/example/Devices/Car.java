@@ -2,7 +2,7 @@ package com.example.Devices;
 
 import com.example.Sellable;
 
-public class Car implements Sellable {
+public abstract class Car implements Sellable {
     private String model;
     private String brand;
     private int year;
@@ -26,4 +26,6 @@ public class Car implements Sellable {
     public void buy(Object obj, Object obj2, double price) throws Exception {
         throw new Exception("Cars can't buy things");
     }
+
+    public abstract void refuel();
 }
