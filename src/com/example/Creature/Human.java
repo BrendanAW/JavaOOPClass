@@ -9,7 +9,7 @@ public class Human extends Animal {
     private Double salary;
 
     public Human(String name) {
-        super("human",name);
+        super("human", name);
         salary = 10.0;
     }
 
@@ -38,6 +38,14 @@ public class Human extends Animal {
     @Override
     public void sell() throws Exception {
         throw new Exception("you can't sell people ya prick");
+    }
+
+    @Override
+    public double feed(double foodAmt) {
+        if (this.weight > 15) {
+            System.out.println("No I really shouldn't, I'm on a diet");
+            return this.weight;
+        } else return alive ? this.weight += foodAmt : 0.0;
     }
 
     public String getFirstName() {

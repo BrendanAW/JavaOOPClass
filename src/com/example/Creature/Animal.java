@@ -3,10 +3,10 @@ package com.example.Creature;
 import com.example.Edible;
 import com.example.Sellable;
 
-public class Animal implements Sellable, Edible {
+public class Animal implements Sellable, Edible, Feedable {
     public String name;
     final String specie;
-    private Double weight;
+    Double weight;
     double price;
     double salary = 10;
     Boolean alive = true;
@@ -43,11 +43,13 @@ public class Animal implements Sellable, Edible {
             weight = 15.5;
     }
 
-    Double feed() {
+    @Override
+    public double feed() {
         return feed(1.0);
     }
 
-    Double feed(double foodAmt) {
+    @Override
+    public double feed(double foodAmt) {
         if (!this.alive) {
             System.out.println("Your animal is already dead :(");
             return 0.0;
@@ -86,7 +88,6 @@ public class Animal implements Sellable, Edible {
 
     @Override
     public void sell() throws Exception {
-
     }
 
     @Override

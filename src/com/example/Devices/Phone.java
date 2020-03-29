@@ -26,7 +26,7 @@ public class Phone extends Devices {
     }
 
     public void installAnApp(String appName, Double version) {
-        System.out.println("The app " + appName + "was installed on the version: " + version);
+        System.out.println("The app " + appName + " was installed on the version: " + version);
     }
 
     public void installAnApp(String[] apps) {

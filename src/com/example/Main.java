@@ -27,5 +27,7 @@ public class Main {
         Phone myPhone = new Phone("Samsung", "Galaxy", 8.1);
         myPhone.turnOn();
         myPhone.installAnApp("FHub");
+
+        rex.feed();
     }
 }
