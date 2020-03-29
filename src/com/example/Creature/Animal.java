@@ -17,6 +17,23 @@ public class Animal implements Sellable, Edible {
         setWeight();
     }
 
+    public Animal(String specie) {
+        System.out.println("We created a new animal");
+        this.specie = specie;
+
+        switch (specie) {
+            case "dog":
+                weight = 10.0;
+                break;
+            case "lion":
+                weight = 12.0;
+                break;
+            default:
+                weight = 7.0;
+                break;
+        }
+    }
+
     private void setWeight() {
         if (this.specie.equals("dog"))
             weight = 10.0;
@@ -27,8 +44,14 @@ public class Animal implements Sellable, Edible {
     }
 
     Double feed() {
+        return feed(1.0);
+    }
+
+    Double feed(double footAmt) {
+        if (!(this.alive && footAmt > 0))
+            System.out.println("Your animal is already dead :(");
         System.out.println("thanks for feeding me!");
-        return ++weight;
+        return weight += footAmt;
     }
 
     void walk() {
@@ -83,7 +106,7 @@ public class Animal implements Sellable, Edible {
         else if (animal.alive) {
             System.out.println("That " + animal.specie + " was tasty!");
             animal.beEaten();
-        }else
+        } else
             System.out.println("there is no animal to be eaten, he already gone son");
 
     }

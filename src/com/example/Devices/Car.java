@@ -1,4 +1,6 @@
-package com.example;
+package com.example.Devices;
+
+import com.example.Sellable;
 
 public class Car implements Sellable {
     private String model;
