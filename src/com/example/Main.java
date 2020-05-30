@@ -24,7 +24,7 @@ public class Main {
         }
         bill.buy(bill, rex, 5.0);
 
-        Phone myPhone = new Phone("Samsung", "Galaxy", 8.1);
+        Phone myPhone = new Phone("Samsung", "Galaxy", 8.1, 50);
         myPhone.turnOn();
         myPhone.installAnApp("FHub");
 

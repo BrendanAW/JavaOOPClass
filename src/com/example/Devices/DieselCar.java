@@ -1,8 +1,8 @@
 package com.example.Devices;
 
 public class DieselCar extends Car {
-    public DieselCar(String model, String brand, int year, Double engine) {
-        super(model, brand, year, engine);
+    public DieselCar(String model, String brand, int year, Double engine, int value) {
+        super(model, brand, year, engine, value);
     }
 
     @Override
@@ -13,5 +13,10 @@ public class DieselCar extends Car {
     @Override
     public String toString() {
         return "I will destroy the Earth and eat your soul";
+    }
+
+    @Override
+    public void sell() throws Exception {
+        System.out.println("THANKS FOR BUYING A DIESEL YOU WORTHLESS SCUM YOU'RE JUST KILLING THE ENVIRONMENT!!");
     }
 }
