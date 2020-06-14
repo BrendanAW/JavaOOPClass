@@ -32,8 +32,8 @@ public class Human extends Animal {
     }
 
     public boolean addCarToGarage(Car car) {
-        if (garage[garage.length - 1] != null || carInGarage(car)) {
-            System.out.println("Hey you already have a full garage!!\nOr you already have that car, either way you can't add it!!");
+        if (carInGarage(car)) {
+            System.out.println("Or you already have that car, either way you can't add it!!");
             return false;
         }
         for (int i = 0; i < garage.length; i++) {
@@ -102,6 +102,7 @@ public class Human extends Animal {
             System.out.println("The car has left your garage");
             if (human.buyCar(car)) {
                 System.out.println("Transaction is complete!!");
+                salary += car.getValue();
             } else {
                 System.out.println("You got your car back! That dirty hobo didn't have the money to pay you!!");
                 addCarToGarage(car);

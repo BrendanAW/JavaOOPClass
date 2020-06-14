@@ -17,22 +17,12 @@ public abstract class Car extends Devices implements Sellable, Comparable<Car> {
         this.year = year;
         this.engine = engine;
     }
-
-    @Override
-    public void buy(Object obj, Object obj2, double price) throws Exception {
-        throw new Exception("Cars can't buy things");
-    }
-
     @Override
     public int compareTo(Car o) {
         return o.year - this.year;
     }
 
     public abstract void refuel();
-
-    public void addOwner(Human human) {
-        owners.add(owners.size(), human);
-    }
 
     public boolean wereYouInMe(Human human) {
         return owners.contains(human);
@@ -47,5 +37,10 @@ public abstract class Car extends Devices implements Sellable, Comparable<Car> {
 
     public int howManyTimesHaveIBeenPassedAround() {
         return owners.size() - 1;
+    }
+
+    public void addOwner(Human human){
+        if(!owners.contains(human))
+            owners.add(human);
     }
 }

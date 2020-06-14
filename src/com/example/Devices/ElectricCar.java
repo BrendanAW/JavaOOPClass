@@ -19,4 +19,9 @@ public class ElectricCar extends Car {
     public void sell() throws Exception {
         System.out.println("YOU BEAUTIFUL BASTARD YOU'RE SAVING THE PLANET AREN'T YOU, YOU CHEEKY MINGING TWAT");
     }
+
+    @Override
+    public void buy(Object obj, Object obj2, double price) throws Exception {
+
+    }
 }
