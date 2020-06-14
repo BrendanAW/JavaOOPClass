@@ -24,4 +24,9 @@ public class DieselCar extends Car {
     public void buy(Object obj, Object obj2, double price) throws Exception {
 
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("VROOM VROOM I SHALL DESTORY YOUR PLANET MUAHAHAHAHA");
+    }
 }

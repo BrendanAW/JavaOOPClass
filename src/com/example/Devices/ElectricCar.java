@@ -24,4 +24,9 @@ public class ElectricCar extends Car {
     public void buy(Object obj, Object obj2, double price) throws Exception {
 
     }
+
+    @Override
+    public void turnOn() {
+        System.out.println("hey girl you turned me on");
+    }
 }

@@ -1,6 +1,6 @@
 package com.example.Devices;
 
-public class Devices {
+public abstract class Devices {
     final String producer;
     final String model;
     int value;
@@ -11,9 +11,7 @@ public class Devices {
         this.value = value;
     }
 
-    public void turnOn() {
-
-    }
+    public abstract void turnOn();
 
     public int getValue() {
         return this.value;
